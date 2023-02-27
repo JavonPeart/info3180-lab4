@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class="gallery">
+    {% for image in images %}
+    <img class="img-format" src="{{ url_for('get_image', filename = image) }}" alt="{ image }">
+    {% endfor %}
+</div>
+
+{% endblock %}
